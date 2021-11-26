@@ -1,0 +1,22 @@
+
+Boat Rental App:
+
+routes:
+/
+=> Displays items available from the shop
+=> 
+
+
+database:
+- customer
+username, password, reservation
+
+- boats
+boat_type, capacity, cost_per_2_hours, deposit_per_boat, quantity_available, location
+
+- items
+item_name, cost_per_2_hours, deposit_per_item, quantity_available, remark, location
+
+Functional Requirements:
+01: Manage Catalogue wiwth boats & items
+    = employees at Main office must CRUD boats & items of company's inventory
