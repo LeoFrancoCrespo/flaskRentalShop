@@ -15,7 +15,12 @@ def index():
         'SELECT boat_type, capacity_min, capacity_max, cost_per_2_hours, deposit_per_boat, quantity, rental_location'
         ' FROM boat_item'
     ).fetchall()
+    item_posts = db.execute(
+        'SELECT item_name, cost_per_2_hours, deposit_per_item, quantity,remark, rental_location'
+        ' FROM rentable_item'
+    ).fetchall()
     return render_template(
         'catalogue/index.html',
         boat_posts=boat_posts,
+        item_posts=item_posts
     )
