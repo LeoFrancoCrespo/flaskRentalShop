@@ -12,10 +12,10 @@ database:
 username, password, reservation
 
 - boats
-boat_type, capacity_min, capacity_max, cost_per_2_hours, deposit_per_boat, quantity_available, location
+boat_type, capacity_min, capacity_max, cost_per_2_hours, deposit_per_boat, quantity, rental_location
 
 - items
-item_name, cost_per_2_hours, deposit_per_item, quantity_available, remark, location
+item_name, cost_per_2_hours, deposit_per_item, quantity, remark, rental_location
 
 Functional Requirements:
 01: Manage Catalogue wiwth boats & items

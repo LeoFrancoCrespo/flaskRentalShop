@@ -5,18 +5,51 @@
 {% endblock %}
 
 {% block content %}
-  {% for post in posts %}
-    <article class="post">
-      <header>
-        <div>
-          <h1>{{ post['boat_type'] }}</h1>
-          <div class="about">min {{ post['capacity_min'] }} max {{ post['capacity_max'] }}</div>
-        </div>
-      </header>
-      <p class="body">Location: {{ post['rental_location'] }}</p>
-    </article>
-    {% if not loop.last %}
-      <hr>
-    {% endif %}
+  <h1>Boats</h1>
+  <table>
+  <tr>
+    <th>boat_type</th>
+    <th>capacity_min</th>
+    <th>capacity_max</th>
+    <th>cost_per_2_hours</th>
+    <th>deposit_per_boat</th>
+    <th>quantity</th>
+    <th>rental_location</th>
+  </tr>
+  {% for post in boat_posts %}
+  <tr>
+      <td>{{post['boat_type']}}</td>
+      <td>{{post['capacity_min']}}</td>
+      <td>{{post['capacity_max']}}</td>
+      <td>{{post['cost_per_2_hours']}}</td>
+      <td>{{post['deposit_per_boat']}}</td>
+      <td>{{post['quantity']}}</td>
+      <td>{{post['rental_location']}}</td>
+  </tr>
   {% endfor %}
+  </table>        
+  <hr>
+  <h1>Items</h1>
+  <table>
+    <tr>
+      <th>boat_type</th>
+      <th>capacity_min</th>
+      <th>capacity_max</th>
+      <th>cost_per_2_hours</th>
+      <th>deposit_per_boat</th>
+      <th>quantity</th>
+      <th>rental_location</th>
+    </tr>
+    {% for post in boat_posts %}
+    <tr>
+        <td>{{post['boat_type']}}</td>
+        <td>{{post['capacity_min']}}</td>
+        <td>{{post['capacity_max']}}</td>
+        <td>{{post['cost_per_2_hours']}}</td>
+        <td>{{post['deposit_per_boat']}}</td>
+        <td>{{post['quantity']}}</td>
+        <td>{{post['rental_location']}}</td>
+    </tr>
+    {% endfor %}
+    </table>   
 {% endblock %}

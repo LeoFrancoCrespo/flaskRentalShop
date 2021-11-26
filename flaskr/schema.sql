@@ -1,6 +1,7 @@
 DROP TABLE IF EXISTS user;
 DROP TABLE IF EXISTS post;
 DROP TABLE IF EXISTS boat_item;
+DROP TABLE IF EXISTS rentable_item;
 
 CREATE TABLE user (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -40,3 +41,18 @@ INSERT INTO
 INSERT INTO 
     boat_item (boat_type,capacity_min,capacity_max,cost_per_2_hours,deposit_per_boat,quantity,rental_location) 
     VALUES ('Sailboat `Valk`', 2, 5, 115, 2500, 35, "main office");
+/*
+CREATE TABLE rentable_item (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    item_name TEXT NOT NULL,
+    cost_per_2_hours INTEGER NOT NULL,
+    deposit_per_item INTEGER NOT NULL,
+    quantity INTEGER NOT NULL,
+    remark TEXT NOT NULL,
+    rental_location TEXT NOT NULL
+);
+
+INSERT INTO 
+    rentable_item (item_name,cost_per_2_hours,deposit_per_item,quantity,remark,rental_location) 
+    VALUES ('Life Jacket', 0, 25, 500, "","main office");
+*/

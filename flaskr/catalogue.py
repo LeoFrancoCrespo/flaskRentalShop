@@ -11,8 +11,11 @@ bp = Blueprint('catalogue', __name__, url_prefix="/catalogue")
 @bp.route('/')
 def index():
     db = get_db()
-    posts = db.execute(
-        'SELECT boat_type, capacity_min, capacity_max, rental_location'
+    boat_posts = db.execute(
+        'SELECT boat_type, capacity_min, capacity_max, cost_per_2_hours, deposit_per_boat, quantity, rental_location'
         ' FROM boat_item'
     ).fetchall()
-    return render_template('catalogue/index.html', posts=posts)
+    return render_template(
+        'catalogue/index.html',
+        boat_posts=boat_posts,
+    )
