@@ -12,7 +12,7 @@ database:
 username, password, reservation
 
 - boats
-boat_type, capacity, cost_per_2_hours, deposit_per_boat, quantity_available, location
+boat_type, capacity_min, capacity_max, cost_per_2_hours, deposit_per_boat, quantity_available, location
 
 - items
 item_name, cost_per_2_hours, deposit_per_item, quantity_available, remark, location
@@ -20,3 +20,9 @@ item_name, cost_per_2_hours, deposit_per_item, quantity_available, remark, locat
 Functional Requirements:
 01: Manage Catalogue wiwth boats & items
     = employees at Main office must CRUD boats & items of company's inventory
+
+02: Support Rental Process:
+    = Customers must be able to place reservations and have access to manage
+    their own reservations (rental process 1)
+    = Employees must be able to CRUD reservations allowing them to manage
+    (rental process 2 and 3)
