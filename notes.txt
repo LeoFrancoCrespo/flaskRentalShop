@@ -18,7 +18,7 @@ boat_type, capacity_min, capacity_max, cost_per_2_hours, deposit_per_boat, quant
 item_name, cost_per_2_hours, deposit_per_item, quantity, remark, rental_location
 
 Functional Requirements:
-01: Manage Catalogue wiwth boats & items
+01: Manage Catalogue with boats & items
     = employees at Main office must CRUD boats & items of company's inventory
 
 02: Support Rental Process:
@@ -26,3 +26,23 @@ Functional Requirements:
     their own reservations (rental process 1)
     = Employees must be able to CRUD reservations allowing them to manage
     (rental process 2 and 3)
+
+
+ToDo:
+1) Setup separate paths for Customer and Empoyee
+=> "/" home index shows some info about the company 
+    - has prompt for Login which goes to User login
+
+=>  "/User/" 
+    "/User/Login"
+        - Users and customer are the same
+    "/User/Register"
+        - For registration of a new customer
+    
+
+=>  "/Employee/"
+    "/Employee/Login"
+        - For employee authenticating that they
+        are a valid employee
+    "/Employee/RegisterNewEmployee"
+        - For registration of new employees
